@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'rake'
 gem 'dropbox-api'
 
 group :test do
