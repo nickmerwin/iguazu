@@ -9,6 +9,7 @@ GEM
     hashie (1.2.0)
     multi_json (1.5.0)
     oauth (0.4.7)
+    rake (10.0.3)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -23,4 +24,5 @@ PLATFORMS
 
 DEPENDENCIES
   dropbox-api
+  rake
   rspec
