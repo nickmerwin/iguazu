@@ -18,20 +18,15 @@ describe Iguazu::MasterImageStore::Scanner do
     
   end
 
-  describe "#list_directories" do
-
-    subject { described_class.new(dummy_client) }
-
-    its(:list_directories) {should == ['Folder 1',
-                                       'Folder 1/Folder A',
-                                       'Folder 1/Folder B',
-                                       'Folder 1/Folder B/Folder C',
-                                       'Folder 2',
-                                       'Folder 2/Folder D',
-                                       'Folder 2/Folder D/Folder X',
-                                       'Folder 2/Folder E',
-                                       'Folder 3']}
-    
-  end
-  
+  subject(:scanner) { described_class.new(dummy_client) }  
+   
+  its(:list_directories) {should == ['Folder 1',
+                                      'Folder 1/Folder A',
+                                      'Folder 1/Folder B',
+                                      'Folder 1/Folder B/Folder C',
+                                      'Folder 2',
+                                      'Folder 2/Folder D',
+                                      'Folder 2/Folder D/Folder E',
+                                      'Folder 2/Folder F',
+                                      'Folder 3']}
 end
