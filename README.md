@@ -28,4 +28,32 @@ site you are looking for.
 
 ## Install
 
-When I know, I will let you know.
+Iguazu uses environment variables to store information needed to connect to 
+dropbox. 
+
+The 4 environment variables are DROPBOX_APP_KEY DROPBOX_APP_SECRET 
+DROPBOX_TOKEN DROPBOX_SECRET
+
+You can set them using
+
+    export DROPBOX_APP_KEY=dummy_data
+    export DROPBOX_APP_SECRET=dummy_data
+
+    export DROPBOX_TOKEN=dummy_data
+    export DROPBOX_SECRET=dummy_data
+
+on Linux and Mac or
+
+    set DROPBOX_APP_KEY=dummy_data 
+    set DROPBOX_APP_SECRET=dummy_data 
+
+    set DROPBOX_TOKEN=dummy_data 
+    set DROPBOX_SECRET=dummy_data 
+
+on Windows.
+
+## Development
+
+Running tests currently requires the environment variables mentioned in 
+the install section to be set. They do not have to have correct values 
+however so feel free to copy and paste the above dummy values.
