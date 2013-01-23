@@ -53,7 +53,3 @@ on Linux and Mac or
 on Windows.
 
 ## Development
-
-Running tests currently requires the environment variables mentioned in 
-the install section to be set. They do not have to have correct values 
-however so feel free to copy and paste the above dummy values.

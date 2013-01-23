@@ -4,4 +4,4 @@ rvm:
   - jruby-19mode
   - jruby-head
 env:
-  - DROPBOX_APP_KEY=dummy DROPBOX_APP_SECRET=dummy DROPBOX_TOKEN=dummy  DROPBOX_SECRET=dummy
+  - DROPBOX_APP_KEY=dummy DROPBOX_APP_SECRET=dummy DROPBOX_TOKEN=dummy DROPBOX_SECRET=dummy
