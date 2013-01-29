@@ -1,6 +1,14 @@
 require 'spec_helper'
 require 'fake_dropbox'
+
+ENV['DROPBOX_APP_KEY'] = 'dummy'
+ENV['DROPBOX_APP_SECRET'] = 'dummy'
+
+ENV['DROPBOX_TOKEN'] = 'dummy'
+ENV['DROPBOX_SECRET'] = 'dummy'
+
 require 'iguazu/master_image_store/clients/dropbox'
+
 
 fake_dropbox = FakeDropbox::Glue.new('spec/fixtures')
 
