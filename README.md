@@ -6,8 +6,8 @@
 
 ## What?
 
-Dropbox managed Ruby On Rails (Or maybe Sinatra; I haven't yet decided)
-Photo-Gallery site.
+Dropbox managed Ruby On Rails (Or maybe Sinatra; hell maybe even a static site a
+la jekyll, I haven't decided yet) Photo-Gallery site.
 
 ## Why?
 
@@ -52,4 +52,6 @@ on Linux and Mac or
 
 on Windows.
 
-## Development
+## Contributing
+
+If you would like to contribute to Iguazu please read the CONTRIBUTING.md file.
