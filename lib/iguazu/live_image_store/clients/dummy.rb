@@ -6,7 +6,7 @@ module Iguazu
         def initialize
         end
 
-        def update_directories
+        def update_directories(directories)
           true
         end
         

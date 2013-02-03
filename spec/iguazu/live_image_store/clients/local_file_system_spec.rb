@@ -16,6 +16,7 @@ describe Iguazu::LiveImageStore::Clients::LocalFileSystem do
 
   before(:each) do
     clean_file_system
+    FileUtils.mkdir_p File.join(@file_root,'folder 1')      
   end
 
   after(:all) do
@@ -27,12 +28,15 @@ describe Iguazu::LiveImageStore::Clients::LocalFileSystem do
   it "Should create new directories" do
     directories = ['folder 1', 'folder 1/folder 2' ]
     subject.update_directories directories
-    Dir.glob(File.join(@file_root,'*')).sort.should == [File.join(@file_root, 'folder 1')]
     Dir.glob(File.join(@file_root,'folder 1','*')).sort.should == [File.join(@file_root,'folder 1','folder 2')]
   end
 
-  it "Should remove deleted directories"
-
+  it "Should remove deleted directories" do 
+    directories = ['folder 2']
+    subject.update_directories directories
+    Dir.glob(File.join(@file_root,'*')).sort.should == [File.join(@file_root, 'folder 2')]    
+  end
+  
 
   def clean_file_system
     FileUtils.rm_r Dir.glob(File.join(@file_root,'*'))
