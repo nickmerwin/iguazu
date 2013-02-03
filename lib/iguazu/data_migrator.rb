@@ -19,7 +19,7 @@ module Iguazu
     end
 
     def update_live_directories
-      dir_creator = Iguazu::LiveImageStore::DirectoryCreator.new(@lis_client)
+      dir_creator = Iguazu::LiveImageStore::DirectoryStructureUpdater.new(@lis_client)
       dir_creator.update_directories(@master_directories)      
     end
     

@@ -19,10 +19,10 @@ describe Iguazu::DataMigrator do
       mocked_scanner
     end
 
-    let(:directory_creator) do
-      mocked_directory_creator = double("directory_creator")
-      Iguazu::LiveImageStore::DirectoryCreator.stub(:new) {mocked_directory_creator}
-      mocked_directory_creator     
+    let(:directory_structure_updater) do
+      mocked_directory_structure_updater = double("directory_structure_updater")
+      Iguazu::LiveImageStore::DirectoryStructureUpdater.stub(:new) {mocked_directory_structure_updater}
+      mocked_directory_structure_updater
     end
     
     
@@ -36,9 +36,9 @@ describe Iguazu::DataMigrator do
       subject.update_directories      
     end
 
-    it "should create directories using the directory_creator" do
+    it "should create directories using the directory_structure_updater" do
       scanner.should_receive(:list_directories) {['/tmp']}
-      directory_creator.should_receive(:update_directories).with(['/tmp'])
+      directory_structure_updater.should_receive(:update_directories).with(['/tmp'])
       subject.update_directories            
     end
   end
