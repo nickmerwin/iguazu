@@ -9,7 +9,7 @@ module Iguazu
         def update_directories(directories)
           true
         end
-        
+
       end
     end
   end

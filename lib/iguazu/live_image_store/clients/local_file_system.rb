@@ -8,9 +8,8 @@ module Iguazu
         end
 
         def update_directories(new_dir_structure)
-	  
 	  new_dir_structure = make_directories_absolute(new_dir_structure)
-	  
+
           make_new_folders(new_dir_structure)	  
 
           remove_old_folders(new_dir_structure)

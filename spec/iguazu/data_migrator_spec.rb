@@ -6,7 +6,6 @@ require 'iguazu/live_image_store/clients/dummy'
 describe Iguazu::DataMigrator do
 
   describe ".initialize" do
-
     it { expect { described_class.new }.to raise_error(ArgumentError,
                                                        /0 for 2/) }    
   end
@@ -24,8 +23,7 @@ describe Iguazu::DataMigrator do
       Iguazu::LiveImageStore::DirectoryStructureUpdater.stub(:new) {mocked_directory_structure_updater}
       mocked_directory_structure_updater
     end
-    
-    
+
     subject { described_class.new(Iguazu::MasterImageStore::Clients::Dummy.new,
                                   Iguazu::LiveImageStore::Clients::Dummy.new)}
 

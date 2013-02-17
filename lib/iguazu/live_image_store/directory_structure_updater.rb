@@ -9,7 +9,7 @@ module Iguazu
       def update_directories(directories)
         @client.update_directories(directories)
       end
-      
+
     end
   end
 end

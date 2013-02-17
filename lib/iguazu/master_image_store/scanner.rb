@@ -2,7 +2,6 @@ module Iguazu
   module MasterImageStore
     class Scanner
 
-      
       def initialize(client)
         @client = client
       end
@@ -14,7 +13,7 @@ module Iguazu
       def list_directories
         @client.list_directories
       end
-      
+
     end
   end
 end

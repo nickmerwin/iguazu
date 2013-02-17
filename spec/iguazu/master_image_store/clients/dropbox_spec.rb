@@ -13,9 +13,9 @@ require 'iguazu/master_image_store/clients/dropbox'
 fake_dropbox = FakeDropbox::Glue.new('spec/fixtures')
 
 describe Iguazu::MasterImageStore::Clients::Dropbox do
-  
+
   subject { described_class.new }
-  
+
   its(:list_directories) {should == ['Folder 1',
                                      'Folder 1/Folder A',
                                      'Folder 1/Folder B',
